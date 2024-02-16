@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>To-do List</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+  <video src="image/video.mp4" autoplay loop class="video"></video>
+  <div class="wrapper">
+    <h1 id="name">To-Do List</h1>
+    <h1 id="time"></h1>
+    <p id="date">7888</p>
+    <div class="task-input">
+      <img src="bars-icon.svg" alt="icon">
+      <input type="text" placeholder="Add a new task">
+    </div>
+    <div class="controls">
+      <div class="filters">
+        <span class="active" id="all">All</span>
+        <span id="pending">Pending</span>
+        <span id="completed">Completed</span>
+      </div>
+      <button class="clear-btn">Clear All</button>
+    </div>
+    <ul class="task-box"></ul>
+  </div>
+  <script>
+    let time = document.getElementById("time");
+    let date = document.getElementById("date");
+
+    let d = new Date();
+      date.innerHTML = d.toLocaleDateString();
+
+    setInterval(() => {
+      let t = new Date();
+      time.innerHTML = t.toLocaleTimeString();
+    }, 1000)
+  </script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
